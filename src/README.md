@@ -4,47 +4,9 @@
 
 <img src="./shell.png" alt="An example shell"/>
 
-[Shell's](https://en.wikipedia.org/wiki/Shell_(computing)) (or sometimes called command-line interfaces) are text based applications that serve as an intermediate between the user and the operating system. The shell is also a tool for how a user interacts with the operating system. Previously, we have written many scripts that our shell can execute by running various programs. The shell that you build with this assignment will be something you can continually expand on in the future, and perhaps distribute as your own one day! Let us take a closer look at the tasks to get started.
+[Shell's](https://en.wikipedia.org/wiki/Shell_(computing)) (or sometimes called command-line interfaces) are text based applications that serve as an intermediate between the user and the operating system. The shell is also a tool for how a user interacts with the operating system.
  
-# Task 1 - Signals
-
-In your shell, you will have to implement a signal handler. We have very briefly discussed signal handlers, so make sure you are familiar with the concept. 
-
-As a refresher, a [signal handler](http://www.gnu.org/software/libc/manual/html_node/Signal-Handling.html) is a software interupt that is sent to a process. Provided below is an example of sending a software interrupt to a process running a shell when you press 'Ctrl+C'. Signal handlers are handy for communicating with the operating system how to handle a process that may be misbehaving, or perhaps to [handle some other event](http://www.gnu.org/software/libc/manual/html_node/Kinds-of-Signals.html#Kinds-of-Signals).
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <signal.h> // This is new!
-
-
-// Create a signal handler
-void sigint_handler(int sig){
-	// Ask yourself why is 35 the last parameter here?
-	write(1,"Terminating through signal handler\n",35); 
-	exit(0);
-}
-
-int main(){
-
-	// Install our signal handler
-	signal(SIGINT, sigint_handler);
-
-	printf("You can only terminate by pressing Ctrl+C\n");
-
-	while(1){
-		printf("Running forever!\n");
-		sleep(1);
-	}
-
-	return 0;
-}
-```
-
-* The following page provides details about signals: https://ftp.gnu.org/old-gnu/Manuals/glibc-2.2.3/html_chapter/libc_24.html
-* The following article provides a nice introduction as well: https://www.thegeekstuff.com/2012/03/catch-signals-sample-c-code/
-
-# Task 2 - Mini-Shell
+Mini-Shell
 
 <img src="./media/shell.gif" alt="An example of your minishell" width=400px/>
 
