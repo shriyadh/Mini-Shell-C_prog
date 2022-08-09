@@ -1,18 +1,6 @@
 # README Please :)
 
-**I strongly strongly strongly strongly recommend** you do all of your testing on your own [linux virtual box you have previously setup](https://www.google.com/search?rlz=1C1CHBF_enUS798US798&ei=t7GTXMb3JIOZ_QbEwZeYAg&q=setting+up+a+linux+virtualbox&oq=setting+up+a+linux+virtualbox&gs_l=psy-ab.3...7203.8384..8512...0.0..0.96.592.8......0....1..gws-wiz.......0i71j35i304i39j0i7i30j0i8i7i30j0i13i30j33i10.wdadpiXRdZ8). The reason why is because you will be using the fork() system call, which if called in an infinite loop can accidently create infinite copies of a process, thus taking all of the servers resources. Executing a shell that forks indefinitely (i.e. a [fork bomb](https://en.wikipedia.org/wiki/Fork_bomb)) **slows down the servers for everyone** (and may prevent you from logging in). We will be very reluctant to grant individual extensions because you blocked yourself and your classmates out from a shared resource. So by running your code on a virtual machine, if you do accidently create a fork bomb, you can simply restart your virtual machine.
-
-So for this assignment, we recommend doing a 'git clone' of your repository in your virtual box, and working local to your machine while you test your code(remember you can still git add/commit/push from another location that you have cloned your repo). Only once you are very confident that your solution works, should you then test it on the Khoury servers. This may sound scary, but for the most part, folks have followed this direction and not caused any problems--just work locally first as you get setup.
-
-# README Again
-
-**I strongly strongly strongly strongly recommend** you do all of your testing on your own [linux virtual box you have previously setup](https://www.google.com/search?rlz=1C1CHBF_enUS798US798&ei=t7GTXMb3JIOZ_QbEwZeYAg&q=setting+up+a+linux+virtualbox&oq=setting+up+a+linux+virtualbox&gs_l=psy-ab.3...7203.8384..8512...0.0..0.96.592.8......0....1..gws-wiz.......0i71j35i304i39j0i7i30j0i8i7i30j0i13i30j33i10.wdadpiXRdZ8). The reason why is because you will be using the fork() system call, which if called in an infinite loop can accidently create infinite copies of a process, thus taking all of the servers resources. Executing a shell that forks indefinitely (i.e. a [fork bomb](https://en.wikipedia.org/wiki/Fork_bomb)) **slows down the servers for everyone** (and may prevent you from logging in). We will be very reluctant to grant individual extensions because you blocked yourself and your classmates out from a shared resource. So by running your code on a virtual machine, if you do accidently create a fork bomb, you can simply restart your virtual machine.
-
-So for this assignment, we recommend doing a 'git clone' of your repository in your virtual box, and working local to your machine while you test your code(remember you can still git add/commit/push from another location that you have cloned your repo). Only once you are very confident that your solution works, should you then test it on the Khoury servers. This may sound scary, but for the most part, folks have followed this direction and not caused any problems--just work locally first as you get setup.
-
 # Introduction
-
-For this assignment, you will be writing your very own shell-- the mini-shell!
 
 <img src="./shell.png" alt="An example shell"/>
 
